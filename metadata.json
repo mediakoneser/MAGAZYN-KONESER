@@ -1,0 +1,7 @@
+{
+  "name": "OVOKO Fast Lister Pro & PHU U KONESERA WMS",
+  "description": "System WMS i Skaner AI Gemini dla stacji demontażu pojazdów PHU U KONESERA Mysłakowice z ewidencją magazynową i smart infolinią.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

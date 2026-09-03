@@ -1,0 +1,57 @@
+{
+  "entities": {
+    "PartItem": {
+      "title": "PartItem",
+      "description": "Auto parts listing inventory item for warehouse and Ovoko/Allegro sync",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of the part"
+        },
+        "createdAt": {
+          "type": "number",
+          "description": "Timestamp in milliseconds"
+        },
+        "updatedAt": {
+          "type": "number",
+          "description": "Timestamp in milliseconds"
+        },
+        "status": {
+          "type": "string",
+          "description": "Status of the part draft or listing"
+        },
+        "listingData": {
+          "type": "object",
+          "description": "Ovoko and WMS listing specifications"
+        },
+        "images": {
+          "type": "array",
+          "description": "Captured and uploaded photo references"
+        }
+      },
+      "required": ["id"]
+    },
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile document",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" }
+      },
+      "required": ["uid"]
+    }
+  },
+  "firestore": {
+    "/parts/{partId}": {
+      "schema": "PartItem",
+      "description": "Inventory auto parts stored by the station and warehouse"
+    },
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile documents"
+    }
+  }
+}
